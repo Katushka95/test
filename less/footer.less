@@ -1,0 +1,39 @@
+footer {
+	background: @theme-color;
+	padding: 20px 0 40px 0;
+	margin-bottom: 20px;
+	.logo {
+		img {
+			width: auto;
+			max-width: 100%;
+		}
+	}
+	a {
+		color: #d6af88;
+		.transition;
+		&:hover,
+		&:focus {
+			color: @brand-danger;
+			text-decoration: none;
+			.transition;
+		}
+	}
+	ul {
+		padding-left: 20px;
+		margin-top: 10px;
+		li {
+			color: #d6af88;
+			margin-bottom: 3px;
+		}
+	}
+
+	p {
+		margin: 10px 0 5px 0;
+		color: #d6af88;
+	}
+
+	span {
+		color: @brand-danger;
+		font-size: 3.1rem;
+	}
+}

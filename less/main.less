@@ -1,0 +1,237 @@
+body {
+	background: url("../images/main_bg.jpg") top center;
+	font-family: 'Roboto Slab', serif;
+}
+
+/******** preview banner ******/
+
+.preview {
+	text-align: center;
+	margin-bottom: 20px;
+	h4 {
+		font-weight: 300;
+		color: @theme-color;
+		font-size: 3rem;
+		height: 103px;
+		margin: 0 0 4px 0;
+		padding-top: 15px;
+		position: relative;
+		&:after {
+			position: absolute;
+			content: "";
+			display: block;
+			height: 2px;
+			width: 100%;
+			bottom: -2px;
+			left: 0;
+		}
+	}
+	.content {
+		position: relative;
+		padding: 20px 10px 30px 10px;
+		&:before {
+			position: absolute;
+			content: "";
+			display: block;
+			height: 2px;
+			width: 100%;
+			top: -2px;
+			left: 0;
+		}
+		p {
+			color: #F4DEC5;
+		}
+		a {
+			position: relative;
+			display: inline-block;
+			color: #F4DEC5;
+			font-weight: 600;
+			text-transform: uppercase;
+			text-decoration: none;
+			&:after {
+				position: absolute;
+				content: "";
+				display: block;
+				height: 2px;
+				width: 100%;
+				bottom: -5px;
+				left: 0;
+				background: #ffffff;
+				transform: scale(0);
+				.transition;
+			}
+			&:hover {
+				text-decoration: none;
+				color: #ffffff;
+				&:after {
+					transform: scale(1);
+					.transition;
+				}
+			}
+		}
+	}
+
+	&.blue {
+		h4 {
+			background: darken(@brand-info, 5.5%);
+			&:after {
+				background: url("../images/banner1_heder_bg.png");
+			}
+		}
+		.content {
+			background: @brand-info;
+			&:before {
+				background: url("../images/banner1_body_bg.png");
+			}
+		}
+	}
+	&.yellow {
+		h4 {
+			background: #D29340;
+			&:after {
+				background: url("../images/banner2_heder_bg.png");
+			}
+		}
+		.content {
+			background: @brand-warning;
+			&:before {
+				background: url("../images/banner2_body_bg.png");
+			}
+		}
+	}
+	&.red {
+		h4 {
+			background: darken(@brand-danger, 5.5%);
+			&:after {
+				background: url("../images/banner3_heder_bg.png");
+			}
+		}
+		.content {
+			background: @brand-danger;
+			&:before {
+				background: url("../images/banner3_body_bg.png");
+			}
+		}
+	}
+}
+
+.content-wrapper {
+	background:	@theme-color;
+	border-top: 10px solid #ECD1B5;
+	padding: 20px 0 0 0;
+	position: relative;
+	width: 100%;
+	hr {
+		width: 100%;
+		height: 4px;
+		border: none;
+		margin: 20px 0;
+		background: url("../images/dot-2.png") repeat-x;
+	}
+}
+
+.ad {
+	text-transform: uppercase;
+	padding-right: 20px;
+	margin-bottom: 25px;
+	position: relative;
+	h5 {
+		margin: 10px 0;
+		font-size: 3.1rem;
+		line-height: 3.1rem;
+		color: @brand-danger;
+		span {
+			font-size: 6rem;
+			line-height: 6rem;
+		}
+	}
+	p {
+		color: #E0BB96;
+		font-weight: 600;
+	}
+
+	&.divider {
+		&:after {
+			content: "";
+			position: absolute;
+			height: 160px;
+			width: 4px;
+			right: 0;
+			top: 0;
+			background: url("../images/dot-2.png") repeat-y;
+		}
+	}
+}
+
+/******* slider ******/
+
+.show_bill {
+	margin-bottom: 15px;
+	margin-top: 15px;
+	.item {
+		height: 300px;
+		text-align: left;
+		h3 {
+			color: @theme-color;
+			font-size: 3.1rem;
+			line-height: 1;
+			margin-top: 0;
+			span {
+				font-size: 6rem;
+			}
+		}
+		a {
+			color: @brand-warning;
+			text-shadow: none;
+			font-weight: 300;
+			font-size: 2.6rem;
+			&:hover,
+			&:focus {
+				color: #d6af88;
+				text-decoration: none;
+			}
+		}
+		p {
+			color: @theme-color;
+			margin-top: 7px;
+		}
+		hr {
+			margin-top: 12px;
+			margin-bottom: 12px;
+			border: none;
+			height: 4px;
+			background: url("../images/dot.png") repeat-x;
+		}
+	}
+	.carousel-control {
+		bottom: auto;
+		width: 46px;
+		height: 24px;
+		opacity: 1;
+		span {
+			font-size: 1rem;
+			display: inline-block;
+			margin: -5px 0 0 -5px;
+			width: auto;
+			height: auto;
+			left: auto;
+			right: auto;
+			top: 50%;
+			bottom: auto;
+			text-shadow: none;
+			line-height: 1;
+		}
+		&.left {
+			right: 0;
+			left: auto;
+			top: 24px;
+			background: @theme-color;
+			color: @brand-danger;
+		}
+		&.right {
+			right: 0;
+			background: @brand-danger;
+			color: @theme-color;
+		}
+	}
+}

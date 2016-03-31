@@ -1,0 +1,16 @@
+{
+  "name": "html",
+  "private": true,
+  "version": "1.0.0",
+  "description": "html template",
+  "keywords": [],
+  "dependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "^0.1.10",
+    "grunt-contrib-less": "1.1.0",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "scripts": {
+    "install": ""
+  }
+}
